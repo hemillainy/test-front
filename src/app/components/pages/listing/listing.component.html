@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="listing">
+		<div class="row">
+			<div class="col-sm-6" *ngFor="let food of (foods | async); let i = index" @toggle>
+				<div class="card">
+					<div class="food-pic">
+						<img class="card-img-top" [class.beverage]="food.cuisine === 'beverage'" src="{{food.image}}">
+					</div>
+					<div class="card-body">
+						<div>
+							<p class="card-text title">
+								{{food.title}}
+							</p>
+							<p class="price">
+								{{food.price | currency:'USD' }}
+							</p>
+						</div>
+						<div class="btn-item">
+							<button type="button" class="btn btn-outline" (click)="addToCart(food)">+</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

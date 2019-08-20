@@ -1,0 +1,94 @@
+.cart
+    box-shadow: 0px 3px 7px -3px rgba(0, 0, 0, 0.25)
+    transition: 0.3s
+    border: 1px solid rgba(128, 128, 128, 0.1)
+    border-radius: 5px
+    position: fixed
+    bottom: 5%
+
+    .header 
+        background: ghostwhite
+
+    h1
+        font-family: 'Montserrat'
+        font-size: 42px
+        padding: 15px
+        font-weight: bold
+        text-align: right        
+
+    
+    .details
+        padding-bottom: 10px
+        display: flex
+        justify-content: space-between
+        padding: 3px 15px
+
+        .btns-qnt
+            display: flex
+            padding-left: 15px
+
+            .add
+                padding-right: 6px
+                color: #4caf50
+            .remove
+                color: red
+
+    .listing-cart
+        height: 150px
+        overflow-y: scroll
+        
+    span
+        font-family: 'Nunito'
+        font-weight: 520
+    .total
+        justify-content: space-between
+        display: flex
+        padding: 15px
+        border-top: 2px solid rgba(128, 128, 128, 0.2)
+        margin-top: 15px
+    
+    .totalPrice
+        color: #4caf50
+        font-weight: bold
+    a
+        cursor: pointer
+
+    .btn-check
+        display: flex
+        justify-content: center
+        padding-bottom: 10px
+        .btn
+            border-radius: 18px
+            height: 31px
+            box-shadow: none
+            font-family: 'Montserrat'
+            background: #bce5c9
+            font-size: 13px
+    .bag
+        display: flex
+        justify-content: center
+        .bag-icon
+            padding-top: 58px
+            padding-bottom: 4px
+            width: 65px
+    
+    .msg
+        display: flex
+        justify-content: center
+
+.check-list
+    font-family: 'Montserrat'
+
+.checkout
+    // background-color: black
+
+.cart:hover
+    box-shadow: 0 17px 15px -5px rgba(0, 0, 0, 0.1)
+
+@media (max-width: 900px)
+    .cart
+        position: unset
+
+@media ( max-width: 575px )
+    .cart
+        

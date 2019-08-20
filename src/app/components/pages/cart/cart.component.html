@@ -1,0 +1,64 @@
+<div class="cart" @toggle>
+	<div class="header">
+		<h1>Your bag</h1>
+	</div>
+	<div class="listing-cart" *ngIf="foods.length > 0">
+		<div *ngFor="let food of foods" @toggle>
+			<div class="details" @toggle>
+				<div>
+					<span>{{food.quantity}}x {{food.title}}</span>
+				</div>
+				<div class="btns-qnt">
+					<div class="add" (click)="setQuantity(food, '+')">
+						<a>+</a>
+					</div>
+					<div class="remove" (click)="setQuantity(food, '-')">
+						<a>-</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="foods.length === 0">
+		<div @toggle>
+			<div class="bag">
+				<img src="assets/img/bag.svg" class="bag-icon">
+			</div>
+			<div class="msg">
+				<span>Your bag is empty</span>
+			</div>
+		</div>
+	</div>
+	<div class="total" @toggle>
+		<span>Total:</span>
+		<span class="totalPrice">{{ totalPrice() | currency:'USD'}}</span>
+	</div>
+	<div class="btn-check">
+		<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" (click)="checkCart()">Proceed
+			to
+			checkout</button>
+	</div>
+
+
+	<!-- Modal -->
+	<ng-template #template>
+		<div class="modal-header">
+			<h4 class="modal-title pull-left">Checkout</h4>
+			<button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<div class="check-list" *ngIf="foods.length > 0">
+				<div *ngFor="let food of foods" @toggle>
+					<div>
+						<span>{{food.quantity}}x {{food.title}}</span>
+					</div>
+				</div>
+			</div>
+			<div *ngIf="foods.length === 0">
+				<span>Your bag is empty</span>
+			</div>
+		</div>
+	</ng-template>
+</div>

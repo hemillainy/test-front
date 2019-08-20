@@ -1,0 +1,71 @@
+.listing
+    height: 400px
+    display: contents
+        
+    .card
+        min-height: 230px
+        margin-bottom: 30px
+        border: 1px solid rgba(128, 128, 128, 0.1)
+        box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.25)
+        transition: 0.3s
+        
+        .food-pic
+            width: 100%
+
+            .beverage
+                object-position: top
+
+        .card-img-top
+            width: 100%
+            height: 140px
+            object-fit: cover
+        
+
+        .title
+            font-family: 'Montserrat'
+            font-weight: 500
+            margin-bottom: 0px
+            text-transform: capitalize
+
+        .price
+            font-family: 'Montserrat'
+            font-weight: 400
+
+        p.price
+            color: #4caf50
+            font-weight: bold
+            margin-bottom: 0px
+
+        .card-body
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            .btn-item
+                height: 38px
+
+            .btn
+                box-shadow: none
+                background-color: #4caf504d
+                color: #1f3e21
+                transition: 0.3s
+                padding: 2px 8px
+
+            .btn:hover
+                background-color: white
+                border-color: #4caf50
+                color: #4caf50
+                font-weight: bold
+
+    .card:hover 
+        box-shadow: 0 17px 15px -5px rgba(0, 0, 0, 0.1)
+    
+    .md
+        width: 50%
+    
+    .col-cart
+        height: 300px !important
+
+@media ( max-width: 575px )
+    .row
+        height: 420px
+        overflow-y: auto

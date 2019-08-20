@@ -1,0 +1,10 @@
+<div class="header">
+	<div class="form-group">
+		<form [formGroup]="searchForm" (ngSubmit)="search()">
+			<label>
+				<img src="assets/img/search.svg" class="icon-search">
+			</label>
+			<input formControlName="query" placeholder="Search" class="input">
+		</form>
+	</div>
+</div>
